@@ -13,12 +13,12 @@ export default function Calc() {
     }
 
     return (
-        <div>
-            <p>IMC calculation</p>
+        <div className="flex flex-col border border-black w-[300px] gap-5">
+            <p className="w-full text-center bg-zinc-100 font-bold text-lg">IMC calculation</p>
             <Form label="weight" state={weight} funcState={setWeight}/>
             <Form label="height" state={height} funcState={setHeight}/>
-            <button onClick={calculate}>Calculate</button>
-            <p>Result: {imc}</p>
+            <button className="bg-indigo-300 text-white mx-2 p-1 rounded-lg cursor-pointer" onClick={calculate}>Calculate</button>
+            <p className="bg-zinc-100 p-1">Result: {imc.toFixed(2)}</p>
             <Table />
         </div>
     )
