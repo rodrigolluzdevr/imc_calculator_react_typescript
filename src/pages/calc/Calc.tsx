@@ -1,6 +1,7 @@
 import { useState } from "react"
 import Form from "@/components/Form"
 import Table from "@/components/Table"
+import Link from "next/link"
 
 export default function Calc() {
     const [weight, setWeight] = useState<number>(0)
@@ -18,6 +19,14 @@ export default function Calc() {
             <Form label="weight" state={weight} funcState={setWeight}/>
             <Form label="height" state={height} funcState={setHeight}/>
             <button className="bg-indigo-300 text-white mx-2 p-1 rounded-lg cursor-pointer" onClick={calculate}>Calculate</button>
+            <Link className="bg-indigo-300 text-white mx-2 p-1 rounded-lg cursor-pointer text-center" href={{
+                pathname:'/dataimc/DataImc',
+                    query:{
+                        p_weight: weight,
+                        p_height: height,
+                        p_imc: imc
+                    }
+                }}>Data Imc</Link>
             <p className="bg-zinc-100 p-1">Result: {imc.toFixed(2)}</p>
             <Table imc={imc} />
         </div>

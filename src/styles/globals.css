@@ -4,3 +4,48 @@
     background-color: rgb(107, 94, 94);
     color: #fff;
 }
+
+.form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+}
+
+.input {
+    border: 1px solid #000;
+    padding: 0.25rem;
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+.grid {
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.gridRowTitle {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.gridTitle {
+    width: 20%;   
+}
+
+.gridRowDate {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.gridRows {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.gridRow {
+    width: 20%;
+}
